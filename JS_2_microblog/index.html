@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>microblog</title>
+    <link rel="stylesheet" href="./style/css/main.min.css">
+    <script src="https://kit.fontawesome.com/1c7ae4b560.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Courgette&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">MicroBlog</h1>
+        <input type="text" class="header__input" placeholder="Type new post here...">
+        <button class="header__button">Add</button>
+        <p class="header__info hide">type something please...</p>
+        <p class="header__info__add hide">post added!</p>
+        <div class="postsAmount">amount of posts: <span class="numberOfPosts">0</span></div>
+    </header>
+
+    <section class="list"></section>
+
+    <div class="edit-panel hide">
+        <h1 class="edit-panel__title">Edit Post</h1>
+        <input type="text" class="edit-panel__input">
+        <button class="edit-panel__button edit-panel__button--add">Edit</button>
+        <button class="edit-panel__button edit-panel__button--cancel">Cancel</button>
+    </div>
+
+    <div class="delete-all">
+        <i class="fas fa-trash-alt delete-all__icon"></i>
+        <p>delete all</p>
+    </div>
+
+    <script src="./js.js"></script>
+
+</body>
+
+</html>

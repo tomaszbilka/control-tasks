@@ -1,0 +1,10 @@
+# 1. Inline Editing
+Create a component for live writing (inline input).
+
+## TODO:
+1. Createaplaceholdertext.
+2. After clicking the placeholder change it to the input.
+3. After click enter or focus out on input change it to normal text and display typed value
+
+
+to start: download files and double click in index.html or run it in yor favorite code editor with live server.

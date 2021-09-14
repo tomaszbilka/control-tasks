@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(65, 65, 65, 0.90);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secret {
+    width: 80%;
+    height: 80%;
+    background-color: #000;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.secret-text {
+    color: #fff;
+    padding: 5px 0;
+}
+
+.hide {
+    display: none;
+}
+
+header {
+    width: 80%;
+    height: 50vh;
+    margin: 0 auto;;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-image: url("./img/kitten.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+header h1 {
+    font-family:cursive;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.pseudo-menu {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pseudo-menu p {
+    padding: 0 5px;
+    color: #fff;
+}
+
+.about-photo {
+    font-size: 0.6rem;
+    padding: 4px 20px;
+}
+
+hr {
+    margin: 30px 40%;
+    border: 10px dotted rgb(33, 216, 64);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+main {
+    margin: 0 10%;
+    margin-bottom: 40px;
+}
+
+main p {
+    font-family:monospace; 
+    line-height: 1.2rem;
+}
+
+footer {
+    background-color: rgb(33, 216, 64);
+    text-align: center;
+    padding: 10px;
+    font-family:monospace; 
+    color: #fff;
+}
