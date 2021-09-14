@@ -11,4 +11,4 @@ Create a simple microblog with list of posts and form to adding a new one.
 7. Display current count of articles
 
 
-to start: download files and double click in index.html or run it in yor favorite code editor with live server.
+to start: download files and double click in index.html or run it in yor favorite code editor with live server (just this way you will have 3 default posts).

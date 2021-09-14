@@ -19,3 +19,5 @@ Helpful Links
 If you don't know how the Konami Code looks like check this:
 
 https://en.wikipedia.org/wiki/Konami_Code
+
+to start: download files and double click in index.html or run it in yor favorite code editor with live server.

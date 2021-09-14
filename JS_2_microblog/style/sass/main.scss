@@ -1,204 +1,204 @@
-@import "config";
+@import 'config';
 
 .header {
-    width: 100%;
-    background-color: $primary-color;
-    @include flex-control(center, center, column);
-    position: relative;
-    padding-bottom: 1.5rem;
+  width: 100%;
+  background-color: $primary-color;
+  @include flex-control(center, center, column);
+  position: relative;
+  padding-bottom: 1.5rem;
 
-    &__title {
-        margin: 3rem 0 2rem 0;
-        font-size: 4rem;
+  &__title {
+    margin: 3rem 0 2rem 0;
+    font-size: 4rem;
+  }
+
+  &__input {
+    font-size: 2.3rem;
+    padding: 1rem;
+    width: 80%;
+    margin-bottom: 2rem;
+    border-radius: 0.6rem;
+    border: none;
+  }
+
+  &__button {
+    padding: 1rem;
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    background-color: $accept;
+    border: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px #000;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: #fff;
+      color: $accept;
     }
+  }
 
-    &__input {
-        font-size: 2.3rem;
-        padding: 1rem;
-        width: 80%;
-        margin-bottom: 2rem;
-        border-radius: 0.6rem;
-        border: none;
+  &__info {
+    font-size: 1.5rem;
+    color: rgb(133, 0, 0);
+    position: absolute;
+    bottom: 8px;
+
+    &.hide {
+      display: none;
     }
+  }
 
-    &__button {
-        padding: 1rem;
-        border-radius: 0.6rem;
-        margin-bottom: 2rem;
-        font-size: 2rem;
-        color: #fff;
-        background-color: $accept;
-        border: none;
-        cursor: pointer;
-        box-shadow: 4px 4px 10px #000;
-        transition: all 0.4s ease;
+  &__empty-list {
+    font-size: 2rem;
+    position: absolute;
+    bottom: -5rem;
+  }
 
-        &:hover {
-            background-color: #fff;
-            color: $accept;
-        }
+  &__info__add {
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    bottom: 8px;
+
+    &.hide {
+      display: none;
     }
-
-    &__info {
-        font-size: 1.5rem;
-        color: rgb(133, 0, 0);
-        position: absolute;
-        bottom: 8px;
-
-        &.hide {
-            display: none;
-        }
-    }
-
-    &__empty-list {
-        font-size: 2rem;
-        position: absolute;
-        bottom: -5rem;
-    }
-
-    &__info__add {
-        font-size: 1.5rem;
-        color: rgb(63, 167, 71);
-        position: absolute;
-        bottom: 8px;
-
-        &.hide {
-            display: none;
-        }
-    }
-    & .postsAmount {
-        position: absolute;
-        left: 5px;
-        bottom: 5px;
-        font-size: 1.3rem;
-    }
+  }
+  & .postsAmount {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    font-size: 1.3rem;
+  }
 }
 
 .list {
-    @include flex-control(center, start, column);
-    flex-wrap: wrap;
-    width: 85vw;
-    margin: 4rem auto;
+  @include flex-control(center, start, column);
+  flex-wrap: wrap;
+  width: 85vw;
+  margin: 4rem auto;
 
-    &__task {
-        margin: 2rem;
-        background-color: $background;
-        padding: 1.3rem;
+  &__task {
+    margin: 2rem;
+    background-color: $background;
+    padding: 1.3rem;
+    border-radius: 0.6rem;
+
+    &__tools {
+      @include flex-control(start, start, row);
+      margin-bottom: 1rem;
+
+      & button {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+        padding: 0.5rem;
         border-radius: 0.6rem;
+        border: 1px solid $primary-color;
+        @extend %flex;
+        cursor: pointer;
+        transition: color 0.2s linear;
 
-        &__tools {
-            @include flex-control(start, start, row);
-            margin-bottom: 1rem;
-
-            & button {
-                margin-left: 0.5rem;
-                margin-right: 0.5rem;
-                font-size: 1.5rem;
-                padding: 0.5rem;
-                border-radius: 0.6rem;
-                border: 1px solid $primary-color;
-                @extend %flex;
-                cursor: pointer;
-                transition: color 0.2s linear;
-
-                &:hover {
-                    color: #fff;
-                }
-
-                & i {
-                    font-size: 1.5rem;
-                    padding: 0.2rem;
-                }
-
-                &.edit {
-                    background-color: rgb(204, 196, 122);
-                }
-                &.delete {
-                    background-color: rgb(240, 104, 104);
-                }
-            }
+        &:hover {
+          color: #fff;
         }
 
-        & p {
-            margin-left: 0.6rem;
-            font-size: 2.8rem;
-            font-family: "Caveat", cursive;
+        & i {
+          font-size: 1.5rem;
+          padding: 0.2rem;
         }
-    }
-}
 
-.score__wrapp {
-    @include flex-control(center, center, row); 
-    & .score {
-        font-size: 2rem;
-    }
-}
-
-.edit-panel {
-    @include flex-control(center, center, column);
-    background-color: rgba(0, 0, 0, 0.87);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    &__title {
-        @extend .header__title;
-        color: #fff;
-    }
-
-    &__input {
-        @extend .header__input;
-    }
-
-    &__button {
-        @extend .header__button;
-
-        &--cancel {
-            background-color: $primary-color;
+        &.edit {
+          background-color: rgb(204, 196, 122);
         }
-    }
-
-    &.hide {
-        display: none;
-    }
-}
-
-.delete-all {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    @extend %flex;
-
-    &__icon {
-        font-size: 2.5rem;
-        color: rgb(74, 118, 240);
-
-        &:hover + p {
-            visibility: visible;
+        &.delete {
+          background-color: rgb(240, 104, 104);
         }
+      }
     }
 
     & p {
-        margin-left: 2rem;
-        font-size: 1.5rem;
-        position: relative;
-        visibility: hidden;
-        transition: all 0.3s linear;
-
-        &::after {
-            content: "";
-            display: block;
-            width: 0px;
-            height: 0px;
-            position: absolute;
-            top: -2px;
-            left: -25px;
-            border-left: 10px solid transparent;
-            border-right: 10px solid #000;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-        }
+      margin-left: 0.6rem;
+      font-size: 2.8rem;
+      font-family: 'Caveat', cursive;
     }
+  }
+}
+
+.score__wrapp {
+  @include flex-control(center, center, row);
+  & .score {
+    font-size: 2rem;
+  }
+}
+
+.edit-panel {
+  @include flex-control(center, center, column);
+  background-color: rgba(0, 0, 0, 0.87);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    @extend .header__title;
+    color: #fff;
+  }
+
+  &__input {
+    @extend .header__input;
+  }
+
+  &__button {
+    @extend .header__button;
+
+    &--cancel {
+      background-color: $primary-color;
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.delete-all {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  @extend %flex;
+
+  &__icon {
+    font-size: 2.5rem;
+    color: rgb(74, 118, 240);
+
+    &:hover + p {
+      visibility: visible;
+    }
+  }
+
+  & p {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    position: relative;
+    visibility: hidden;
+    transition: all 0.3s linear;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      top: -2px;
+      left: -25px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid #000;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+  }
 }
